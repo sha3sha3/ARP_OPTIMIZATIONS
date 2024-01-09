@@ -31,8 +31,8 @@ int main()
 
     conf_ptr gameConfig = malloc(sizeof(conf_ptr));
     
-    strcpy(gameConfig->difficulty, cJSON_GetObjectItemCaseSensitive(json, "PlayerName")->valuestring);
-    strcpy(gameConfig->playerName, cJSON_GetObjectItemCaseSensitive(json, "Difficulty")->valuestring);
+    strcpy(gameConfig->difficulty, cJSON_GetObjectItemCaseSensitive(json, "Difficulty")->valuestring);
+    strcpy(gameConfig->playerName, cJSON_GetObjectItemCaseSensitive(json, "PlayerName")->valuestring);
     gameConfig->startingLevel = cJSON_GetObjectItemCaseSensitive(json, "StartingLevel")->valueint;
     
     LOG(gameConfig);
